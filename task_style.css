@@ -10,12 +10,29 @@
     padding: 8px;
 }
 
+.Task_Manager button {
+    padding: 8px;
+    font-size: 14px;
+    font-family: cursive;
+}
+
+
 #task_list_ul li {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    
+    align-items: center;
+    margin: 8px 0;
 }
 #task_list_ul li button {
     width: min-content;
+}
+@media (max-width: 480px) {
+    input {
+        width: 65%;
+    }
+
+    button {
+        font-size: 18px;
+    }
 }
