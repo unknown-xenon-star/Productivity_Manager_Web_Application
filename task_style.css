@@ -1,0 +1,21 @@
+
+.Task_Manager {
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.Task_Manager input {
+    width: 70%;
+    padding: 8px;
+}
+
+#task_list_ul li {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+#task_list_ul li button {
+    width: min-content;
+}

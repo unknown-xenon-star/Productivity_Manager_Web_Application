@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./task_style.css">
+    <style>
+        .done {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <!-- Hamburger checkbox -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+            <!-- Theme Toggle -->
+            <button id="theme-toogle">🌙</button>
+        </div>
+
+    </header>
+    
+    
+    <div class="Task_Manager">
+        <h1>My Task Manager</h1>
+        <input type="text" placeholder="Enter a task" id="task_input">
+        <button id="Task_add_button">Add Task</button>
+        <h2>Tasks</h2>
+        <ul id="task_list_ul">
+            <li><span>Learn HTML</span></li>
+            <li><span>Learn CSS</span></li>
+        </ul>
+    </div>
+
+
+    <footer class="footer-basic">
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+</body>
+<script src="Theme.js"></script>
+<script src="./task_manager.js"></script>
+</html>
