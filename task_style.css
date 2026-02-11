@@ -55,3 +55,13 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.priority-High { color: red; }
+.priority-Medium { color: orange; }
+.priority-Low { color: green; }

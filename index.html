@@ -6,11 +6,6 @@
     <title>Task Manager</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./task_style.css">
-    <style>
-        .done {
-            color: red;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -37,10 +32,20 @@
             <input type="text" placeholder="Enter a task" id="task_input">
             <span>    
                 <input type="date" id="dateInput">
+                <select id="priorityInput">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
                 <button id="Task_add_button">Add Task</button>
             </span>
         </span>
         <h2>Tasks</h2>
+        <div class="filters">
+            <button data-filter="all">All</button>
+            <button data-filter="pending">Pending</button>
+            <button data-filter="completed">Completed</button>
+        </div>
         <ul id="task_list_ul">
             <li><span>Learn HTML</span></li>
             <li><span>Learn CSS</span></li>
