@@ -1,18 +1,18 @@
-const toogleBtn = document.getElementById("theme-toogle");
+const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 
 // Save theme Local
 if (localStorage.getItem("theme")==="dark") {
     body.classList.add("dark");
-    toogleBtn.textContent = "☀️";
+    toggleBtn.textContent = "☀️";
 }
-toogleBtn.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark");
     if (body.classList.contains("dark")) {
-        toogleBtn.textContent = "☀️";
+        toggleBtn.textContent = "☀️";
         localStorage.setItem("theme", "dark");
     } else {
-        toogleBtn.textContent = "🌙";
+        toggleBtn.textContent = "🌙";
         localStorage.setItem("theme", "light");
     }
 })
