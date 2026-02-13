@@ -35,7 +35,39 @@
             border: 1px solid grey;
             padding: auto;
         }
-        
+        .task-meta .TASK_Category, .TASK_Priorities, .TASK_Due {
+            border-right: 1px solid black;
+            padding: 0 4px 0 0;
+        }
+        .NON_TASK_META {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .task_actions button, input {
+            padding: 3px;
+            font-size: 13px;
+            margin: 0 3px;
+        }
+        .task_actions input[type="checkbox"] {
+            margin: 5px 2px 5px 5px;
+            width: 27px;
+            height: 27px;
+        }
+        .task_actions {
+            display: flex;
+            align-items: center;
+            
+        }
+        .Task_Manager .Adder input[type="date"] {
+            margin: 0;
+        }
+        #Search_task_input {
+                width: 42%;
+                min-width: 20%;
+                max-width: 40%;
+
+        }
     </style>
 </head>
 <body>
@@ -51,7 +83,7 @@
                 <a href="#">Contact</a>
             </nav>
             <!-- Theme Toggle -->
-            <button id="theme-toogle">🌙</button>
+            <button id="theme-toggle">🌙</button>
         </div>
 
     </header>
@@ -82,17 +114,40 @@
                     <button data-filter="pending">Pending</button>
                     <button data-filter="completed">Completed</button>
                 </div>
+                <input type="text" placeholder="Search Task" id="Search_task_input">
                 <div>
-                    <select name="Priority" id="priorityOutput">
+                    <select name="Priority" id="priorityFilter">
+                        <option value="all">All Priorites</option>
                         <option value="Low">Low</option>
                         <option value="Medium">Medium</option>
                         <option value="High">High</option>
                     </select>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Study">Study</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                    </select>
                 </div>
             </div>
             <ul id="task_list_ul">
-                <li><span>Learn HTML</span></li>
-                <li><span>Learn CSS</span></li>
+                <li draggable="true" class="task-item">
+                    <span class="task-item_context">Learn HTML</span>
+                    <div class="NON_TASK_META">
+                        <span  class="task-meta">
+                            <span class="TASK_Category">Study</span>
+                            <span class="TASK_Priorities">Medium</span>
+                            <span class="TASK_Due">2026-02-15</span>
+                        </span>
+                        <div class="task_actions">
+                            <input type="checkbox" class="task-toggle">
+                            <button class="edit-task">✏️</button>
+                            <button class="delete-task">❌</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li draggable="true" class="task-item"><span>Learn CSS</span></li>
             </ul>
         </div>
         
@@ -112,5 +167,5 @@
         </footer>
 </body>
 <script src="Theme.js"></script>
-<!-- <script src="./task_manager.js"></script> -->
+<script src="./task_manager.js"></script>
 </html>
